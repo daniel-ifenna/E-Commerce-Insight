@@ -75,22 +75,13 @@ The top-performing products are:
 - Item C (Books): $22,170.15
 - Item E (Electronics): $19,499.03
 - Item E (Toys): $19,473.10
-as shown in the diagram below;
-
-
-![](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Screenshot%202025-01-21%20130320.png)
-
-
-
-
-
+as shown in the diagram below;![](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Screenshot%202025-01-21%20130320.png)
 
 2. Unique Customers
 - 99 unique customers had their orders marked as completed.
 
 3. Which region has the highest number of customers?
-   - North and West both have the highest number of customers. A total of 74 customers in both regions
-    ![](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Screenshot%202025-01-21%20131858.png)
+- North and West both have the highest number of customers. A total of 74 customers in both regions![](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Screenshot%202025-01-21%20131858.png)
 
 
 
@@ -98,8 +89,7 @@ as shown in the diagram below;
 
 
 4. Monthly Sales Trends
-The monthly sales trends over the dataset's timeframe are visualized below:
-![](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Monthly%20sales.png)
+The monthly sales trends over the dataset's timeframe are visualized below:![](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Monthly%20sales.png)
    
 
 
@@ -108,24 +98,12 @@ The monthly sales trends over the dataset's timeframe are visualized below:
 
 
 6. Most Popular Product Category by Month
-This analysis shows which product categories were most popular during different months.
-
-
-
-![](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Screenshot%202025-01-21%20132930.png)
-
-
-
-
-
-   
-
-6. Order Status Percentages
+This analysis shows which product categories were most popular during different months.![](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Screenshot%202025-01-21%20132930.png)
+7.  Order Status Percentages
 - Canceled: 22.8%
 - Completed: 68.6%
 - Returned: 8.6%
-
-7.  Correlation Between Region and Order Status
+8. Correlation Between Region and Order Status
 The Chi-squared test results:
 - p-value: 0.7468
 Since the p-value is greater than 0.05, there is no significant association between the region and order status. The distribution of canceled, completed, and returned orders does not significantly vary across regions.
