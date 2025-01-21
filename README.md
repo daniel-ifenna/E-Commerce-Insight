@@ -78,8 +78,7 @@ The top-performing products are:
 as shown in the diagram below;
 
 
-
-   ![](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Screenshot%202025-01-21%20130320.png)
+![](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Screenshot%202025-01-21%20130320.png)
 
 
 
@@ -100,7 +99,7 @@ as shown in the diagram below;
 
 4. Monthly Sales Trends
 The monthly sales trends over the dataset's timeframe are visualized below:
-   ![](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Monthly%20sales.png)
+![](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Monthly%20sales.png)
    
 
 
@@ -108,10 +107,8 @@ The monthly sales trends over the dataset's timeframe are visualized below:
 
 
 
-5. Most Popular Product Category by Month
+6. Most Popular Product Category by Month
 This analysis shows which product categories were most popular during different months.
-
-
 
 
 
