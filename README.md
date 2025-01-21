@@ -5,7 +5,6 @@ This analysis is based on e-commerce data sourced from ChatGPT. I conducted an i
 - What are the top 5 products by revenue?
 - How many unique customers made purchases?
 - Which region has the highest number of customers?
-- What is the average revenue per customer?
 - What does the monthly sales trend look like over the dataset's timeframe?
 - Which product category is the most popular each month?
 - What percentage of orders were completed, canceled, and returned?
@@ -25,19 +24,11 @@ The following report presents the findings to these questions based on the data 
 - Total.Price: The total price of the order.
 
 ## Analysis Findings 
-Code Structure 
+a glimpse of my code structure 
 ~~~{r}
 sales<-read.csv("Portfolio/E-commerce/ecommerce_dataset.csv")
-str(sales)
-mean(sales$Total.Price)
-library(tidyverse)
-#Which product category contributes the most to total sales?
-most_sales<- sales %>% 
-  group_by(Product.Category) %>% 
-  summarise(spt=sum(Total.Price)) %>% 
-  arrange(desc(spt)) %>% 
-  head (1)
-View(most_sales)
+
+library(tidyverse))
 
 #Identify the top 5 products by revenue.
 top_products<-sales %>% 
@@ -46,29 +37,6 @@ top_products<-sales %>%
   arrange(desc(spt)) %>% 
   head(5)
 View(top_products)
-
-#How many unique customers made purchases?
-Unique_purchases<-sales %>% 
-  filter(Order.Status=="Completed") %>% 
-  select(Customer.ID) %>% 
-  summarise(Unique_purchases=n_distinct(Customer.ID))#n_distinct() function counts the unique customer id
-print(Unique_purchases)    
-
-#Which region has the highest number of customers?
-highest_region<- sales %>% 
-  select(Region, Customer.ID) %>% 
-  group_by(Region) %>% 
-  summarise(customer_count=n_distinct(Customer.ID)) %>% 
-  arrange(desc(customer_count))
-print(highest_region)          
-
-#What is the average revenue per customer?
-Average_revenue<-sales %>% 
-  select(Customer.ID,Total.Price) %>% 
-  group_by(Customer.ID) %>% 
-  summarise(revenue= mean(Total.Price)) %>% 
-  arrange(desc(revenue))
-print(Average_revenue)  
 
 #How do monthly sales trends look over the dataset's timeframe?
 sales$order_date1<-as.Date(sales$Order.Date, format="%m/%d/%Y")
@@ -83,7 +51,6 @@ monthly_sales<-sales %>%
 monthly_sales$year_month <- as.Date(paste0(monthly_sales$year_month,","))
 str(monthly_sales)
 
-
 library(ggplot2)
 monthly_sales %>%
   ggplot(aes(x = year_month, y = tsr)) +
@@ -91,21 +58,6 @@ monthly_sales %>%
   labs(title = "Monthly Sales Trend", x = "Months", y = "Total Sales") +
   scale_x_date(date_labels = "%b %Y", date_breaks = "1 month") +  # Set interval to 1 month
   theme_gray()
-
-#What is the most popular product category by month?
-popular_products<- sales %>% 
-  group_by(month, Product.Category) %>% 
-  summarise(count=n()) %>%  
-  group_by(month) %>% 
-  arrange(month, desc(count)) %>% 
-  slice(1)
-
-#What percentage of orders are completed, canceled, and returned?
-order_analysis<-sales %>% 
-  group_by(Order.Status) %>% #group by order status
-  summarise(count=n()) %>% #Count the number of orders for each category
-  mutate(percentage=count/sum(count)*100) #Calcuate the percentage for each status
-print(order_analysis)
 
 contingency_table <- table(sales$Region, sales$Order.Status)
 print(contingency_table)
@@ -115,5 +67,43 @@ chi_square_result <- chisq.test(contingency_table)
 print(chi_square_result)
 ~~~
 1. Identify the top 5 products by revenue.
-   ![]()
+   The product name grouped the data result. The highest product category is
+ - Item D "BOOKS" with a total sum of $23,627.46
+- Item D "Home & Kitchen" a total sum of $22, 331.79
+- Item C "Books" a total sum of $22,170.15
+- Item E "Electronics" a total sum of $19,499.03
+- Item E "Toys" has a total sum of $19,473.10
+
+as shown in the diagram below;
+
+
+
+   ![](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Screenshot%202025-01-21%20130320.png)
+
+
+
+
+2. How many unique customers made purchases?
+   - 99 customers had their orders. status-completed.
+
+3. Which region has the highest number of customers?
+   - North and West both have the highest number of customers. A total of 74 customers in both regions
+    ![](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Screenshot%202025-01-21%20131858.png)
+
+
+
+
+
+
+
+4. How do monthly sales trends look over the dataset’s timeframe?
+   ![](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Monthly%20sales.png)
+
+
+
+
+
+
+5. What is the most popular product category by month?
+      ![](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Screenshot%202025-01-21%20132930.png)
 
