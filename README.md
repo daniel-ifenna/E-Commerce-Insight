@@ -66,14 +66,15 @@ chi_square_result <- chisq.test(contingency_table)
 
 print(chi_square_result)
 ~~~
-1. Identify the top 5 products by revenue.
-   The product name grouped the data result. The highest product category is
- - Item D "BOOKS" with a total sum of $23,627.46
-- Item D "Home & Kitchen" a total sum of $22, 331.79
-- Item C "Books" a total sum of $22,170.15
-- Item E "Electronics" a total sum of $19,499.03
-- Item E "Toys" has a total sum of $19,473.10
+### Insights and Visuals
+1. I1. Top 5 Products by Revenue
+The top-performing products are:
 
+- Item D (Books): $23,627.46
+- Item D (Home & Kitchen): $22,331.79
+- Item C (Books): $22,170.15
+- Item E (Electronics): $19,499.03
+- Item E (Toys): $19,473.10
 as shown in the diagram below;
 
 
@@ -83,8 +84,8 @@ as shown in the diagram below;
 
 
 
-2. How many unique customers made purchases?
-   - 99 customers had their orders. status-completed.
+2. Unique Customers
+- 99 unique customers had their orders marked as completed.
 
 3. Which region has the highest number of customers?
    - North and West both have the highest number of customers. A total of 74 customers in both regions
@@ -95,15 +96,39 @@ as shown in the diagram below;
 
 
 
-
-4. How do monthly sales trends look over the dataset’s timeframe?
+4. Monthly Sales Trends
+The monthly sales trends over the dataset's timeframe are visualized below:
    ![](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Monthly%20sales.png)
+   
 
 
 
 
 
 
-5. What is the most popular product category by month?
-      ![](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Screenshot%202025-01-21%20132930.png)
+5. Most Popular Product Category by Month
+This analysis shows which product categories were most popular during different months.
+
+
+
+
+
+![](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Screenshot%202025-01-21%20132930.png)
+
+
+
+
+
+   
+
+6. Order Status Percentages
+- Canceled: 22.8%
+- Completed: 68.6%
+- Returned: 8.6%
+
+7.  Correlation Between Region and Order Status
+The Chi-squared test results:
+- p-value: 0.7468
+Since the p-value is greater than 0.05, there is no significant association between the region and order status. The distribution of canceled, completed, and returned orders does not significantly vary across regions.
+
 
