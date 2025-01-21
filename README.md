@@ -84,6 +84,8 @@ as shown in the diagram below;
 
 
 
+
+
 2. Unique Customers
 - 99 unique customers had their orders marked as completed.
 
