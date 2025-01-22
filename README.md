@@ -10,7 +10,7 @@ This analysis is based on e-commerce data sourced from ChatGPT. I conducted an i
 - What percentage of orders were completed, canceled, and returned?
 - Is there a correlation between region and order status?
   
-The following report presents the findings to these questions based on the data analysis conducted. For further reference, the raw data is provided in the accompanying Excel file.[Download Here](https://1drv.ms/x/c/fc11b36f16d1a624/Eco90l1gX41Dr2Rb5xDtz9QB5zamhuFdE8iGs-1fd94k2g?e=EOkf4d)
+The following report presents the findings to these questions based on the data analysis conducted. For further reference, the raw data is provided in the accompanying Excel file. [Download Here](https://1drv.ms/x/c/fc11b36f16d1a624/Eco90l1gX41Dr2Rb5xDtz9QB5zamhuFdE8iGs-1fd94k2g?e=EOkf4d)
 ## Explanation of Variables
 - Order.ID: Unique identifier for each order.
 - Customer.ID: Unique identifier for each customer.
@@ -67,21 +67,22 @@ chi_square_result <- chisq.test(contingency_table)
 print(chi_square_result)
 ~~~
 ### Insights and Visuals
-1. I1. Top 5 Products by Revenue
+1. Top 5 Products by Revenue
 The top-performing products are:
-
 - Item D (Books): $23,627.46
 - Item D (Home & Kitchen): $22,331.79
 - Item C (Books): $22,170.15
 - Item E (Electronics): $19,499.03
 - Item E (Toys): $19,473.10
-as shown in the diagram below;![](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Screenshot%202025-01-21%20130320.png)
+as shown in the diagram below;
+![Top 5 products](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/a17eddca45db73b0e5672f20aa87e44095ff239c/images/Screenshot%202025-01-21%20130320.png)
 
 2. Unique Customers
 - 99 unique customers had their orders marked as completed.
 
 3. Which region has the highest number of customers?
-- North and West both have the highest number of customers. A total of 74 customers in both regions![](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Screenshot%202025-01-21%20131858.png)
+- North and West both have the highest number of customers. A total of 74 customers in both regions
+![Highest number of customers](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Screenshot%202025-01-21%20131858.png)
 
 
 
@@ -89,7 +90,8 @@ as shown in the diagram below;![](https://github.com/daniel-ifenna/E-Commerce-In
 
 
 4. Monthly Sales Trends
-The monthly sales trends over the dataset's timeframe are visualized below:![](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Monthly%20sales.png)
+The monthly sales trends over the dataset's timeframe are visualized below:
+![Sales Trend](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Monthly%20sales.png)
    
 
 
@@ -98,11 +100,15 @@ The monthly sales trends over the dataset's timeframe are visualized below:![](h
 
 
 6. Most Popular Product Category by Month
-This analysis shows which product categories were most popular during different months.![](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Screenshot%202025-01-21%20132930.png)
+This analysis shows which product categories were most popular during different months.
+![Popular product each month](https://github.com/daniel-ifenna/E-Commerce-Insight/blob/main/images/Screenshot%202025-01-21%20132930.png)
+
+
 7.  Order Status Percentages
 - Canceled: 22.8%
 - Completed: 68.6%
 - Returned: 8.6%
+
 8. Correlation Between Region and Order Status
 The Chi-squared test results:
 - p-value: 0.7468
